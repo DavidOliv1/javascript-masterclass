@@ -49,11 +49,13 @@ const database = {
       rows = rows.filter(row => {
         return row[columnWhere] === valueWhere;
       });
+
+      return rows;
     }
 
     rows = rows.map(row => {
       let selectedRow = {};
-      for (col of columns) {
+      for (let col of columns) {
         selectedRow[col] = row[col];
       }
       return selectedRow;
