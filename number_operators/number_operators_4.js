@@ -63,16 +63,29 @@ console.log(~2);
 console.log((4).toString(2).padStart(32, 0));
 console.log((16).toString(2).padStart(32, 0));
 
-// No exemplo abaixo, o 4 em representação binária é deslocado 2 bits a esquerda, preenchendo com zeros à direta. Perceba que cada bit que deslocamos a esquerda multiplicamos o valor por 2 e cada bit que deslocamos a direita dividimos o valor por 2.
+/* No exemplo abaixo, o 4 em representação binária é deslocado 2 bits a esquerda, preenchendo com zeros à direta. Perceba que cada bit 
+que deslocamos a esquerda multiplicamos o valor por 2 e cada bit que deslocamos a direita dividimos o valor por 2. */
+
+/* O operador << desloca o primeiro operando pelo número especificado de bits à esquerda. Bits excedentes deslocados para fora do limite
+à esquerda são descartados. Bits zero são inseridos à direita. */
 
 console.log(4 << 2);
 
 console.log((128).toString(2).padStart(32, 0));
 console.log((64).toString(2).padStart(32, 0));
 
+/* O operador >> desloca o primeiro operando pelo número especificado de bits à direita. Bits excedentes deslocados para fora do limite 
+à direita são descartados. Cópias dos bits mais à esquerda são deslocadas a partir da esquerda. */
+
 console.log(128 >> 1);
 
+
+console.log((2).toString(2).padStart(32, 0));
 console.log((-2 >>> 0).toString(2).padStart(32, 0));
+
+/* O operador >>> desloca o primeiro operando pelo número especificado de bits à direita. Bits excedentes deslocados para fora do limite
+à direita são descartados. Bits zero são inseridos à esquerda. */
+
 console.log((2147483647).toString(2).padStart(32, 0));
 
 console.log(-2 >>> 1);
